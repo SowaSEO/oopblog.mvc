@@ -35,7 +35,8 @@ class ControllerBlog extends Controller{
                 Url::getCountUrlSegments()==1)
         {  
              
-//              throw new HttpException('Forbitten','403');
+//              throw new HttpException('Forbitten','403           
+//              throw new HttpException(');
 //            $this->show404page();
      
         } elseif (Url::getCountUrlSegments()==2) {

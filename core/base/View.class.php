@@ -55,11 +55,6 @@ class View {
         return Auth::isAdmin();
     }
 
-
-
-
-
-
     public function setH1($str) {
         $this->h1 = $str ;
     }

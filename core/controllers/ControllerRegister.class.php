@@ -23,32 +23,22 @@ class ControllerRegister extends Controller{
     public function actionIndex() {
         
                 if(Auth::isGuest()){
-                    
-//                    echo 'REGISTERFORM';
             
             $model = new RegisterForm();
             
             if(Request::isPost()){
                 
-//                echo '___  Request::isPost()';
-                
-//                $myPost= $model->load(Request::getPost());
-//                if($model->load(Request::getPost()) and $model->validate())
                 if ( $model->load(Request::getPost())) {
-                    
-//                    echo '<br>load(Request::getPost() if ( $model->load(Request::getPost()))';
-                    
+                                        
                     if ($model->validate()) {
-        
-//                        echo 'ACTION REGISTRATION -if ($model->validate()) {';
-                        
+                                
                         if($model->doRegister()){
                         
                             header ('Location: /' );
                         }                        
                     }
                 } 
-//                else  echo '<hr> else $model->load(Request::getPost())<br>';
+
             }
             
             $this->_view->render('registration',['model'=>$model]);

@@ -47,8 +47,7 @@ class ControllerBlogs extends Controller{
             
             $curPage=1;
         }
-                                    
-        
+                                            
         $model = new BlogsForm();
                 
         $model->_maxPageNum =$model->getMaxPageNumber('post',POST_FOR_PAGE , 'published');
@@ -60,8 +59,7 @@ class ControllerBlogs extends Controller{
         $model->listposts = $model->getpostForPage($model->_currentPage,POST_FOR_PAGE,'published');
                   
         $this->_view->render('blogs',['model'=>$model]);
-    }
-            
+    }            
     
     public function actionModerationpost() {
         

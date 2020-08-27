@@ -18,8 +18,7 @@ use library\Auth;
 class ControllerLogout extends Controller{
     
     public function actionIndex() {
-        
-//        echo ' Logout';
+
         if (!Auth::isGuest()){
             
             Auth::logout();            
