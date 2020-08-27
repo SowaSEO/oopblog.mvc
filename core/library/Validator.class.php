@@ -46,7 +46,8 @@ class Validator {
             
     protected function unique($field) {
         
-        $sql="SELECT * FROM {$this->_table} WHERE {$field} ={$this->data[$field]}";
+        $sql="SELECT * FROM {$this->_tableName} WHERE {$field} = '{$this->_data[$field]}'";
+
         $res=Db::getDb()->sendSelectQuery($sql);
         
         if($res->num_rows > 0 ){
@@ -56,8 +57,8 @@ class Validator {
     }
     
     protected function confirm($field) {
-        if ($this->data[$field] != $this->data[$field.'_confirm']){
-            $this->addError($field,$field.' несовпадают с '.$field.'_confirm');
+        if ($this->data[$field] != $this->_data[$field.'_confirm']){
+            $this->addError($field,$field.' не співпадають '.$field.'_confirm');
             
         }
     }
@@ -80,12 +81,13 @@ class Validator {
     public function ValidateThis() {
 
         foreach ($this->_rules as $field => $rules) {
-            
-            foreach ($rules as $rule) {
 
+            foreach ($rules as $rule) {
+                               
                 if (method_exists($this,$rule)) {
-                                        
+
                     if (is_null($this->getError($field))){
+                        
                         $this->$rule($field);
                     }
 
@@ -95,13 +97,12 @@ class Validator {
                 }
             }
         }
-       
+               
         if ( !empty($this->_errors)) {
 
             return false ;
         }
         
-
         return true;
     }
     

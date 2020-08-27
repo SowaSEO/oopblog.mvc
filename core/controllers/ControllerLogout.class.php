@@ -19,11 +19,12 @@ class ControllerLogout extends Controller{
     
     public function actionIndex() {
         
+//        echo ' Logout';
         if (!Auth::isGuest()){
             
             Auth::logout();            
             
-            header('Location: /');
+         header("Location: /");             
             
         }else {
             throw new HttpException('Forbidden','403');

@@ -8,7 +8,7 @@
 
 define('SECRETKEY','sU1bo1ta');
 
-define('POST_FOR_PAGE',2);
+define('POST_FOR_PAGE',5);
 
 define('POST_STATUS_MODERATION',0);
 

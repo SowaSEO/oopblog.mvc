@@ -42,22 +42,33 @@ abstract class BaseForm  {
     
 
     public function validate() {
-
+    
+        
+//    echo '<br>'; echo '<br>validate() START ';
+    
         $validator = new Validator($this->_data, $this->getRules());
-                        
+//                echo '<br>1';        
         if(!empty($this->_tableName)){
-            
+//            echo '<br>2';
             $validator->setTable($this->_tableName);             
+//            echo '<br>3';
         }
+//        var_dump($validator);
+//                    echo '<br>4';
                     
         $resvalid= $validator->validateThis();
-           
+//           echo '<br>5';
         if (!$resvalid) {
-                        
+//                      echo '<br>6';  
             $this->_errors = $validator->getErrors();
-                       
+//                       echo '<br>7';
+//            echo '<br>validate() FALSE ';
+            
             return false;
         }
+        
+//        echo '<br>'; echo '<br>validate() TRUE ';
+        
         return true;
         
     }
@@ -72,19 +83,15 @@ abstract class BaseForm  {
                 
                 $this->$propName = $propValue;
                 
-                $this->_data[$propName] = $propValue;                                        
-                
-                
+                $this->_data[$propName] = $propValue;
+
             } else {
-
+//                echo ' <br> false  ';                var_dump($this->_data[$propName]); 
+//                echo '   ';                var_dump($propValue); 
                 return false;
-                
             }
-            
-        }        
-
+        }
         return true;
-
     }
 
     public function getErrors() {

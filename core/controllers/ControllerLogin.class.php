@@ -21,14 +21,13 @@ use library\Request;
 //
 //use library\Validator;
 
-
-
 class ControllerLogin extends Controller{
     
     public function actionIndex() {
         
          if (Auth::isGuest()){
             
+       
             $model = new LoginForm();                    
                     
             if(Request::isPost()){            
@@ -37,7 +36,8 @@ class ControllerLogin extends Controller{
                                   
                 {
                     
-                    if ($model->doLogin()){
+                    if ($model->doLogin()){    
+//                        echo "LOGIN ";
                         
                         header("Location: /");                        
                     }
@@ -57,40 +57,40 @@ class ControllerLogin extends Controller{
         
     }
            
-    public function actionRegister() {
-        
-        if(Auth::isGuest()){
-                        
-            $model = new RegisterForm();
-            
-            if(Request::isPost()){
-                
-                $myPost=[];
-                $myPost= $model->load(Request::getPost());
-                                                            
-                if ( $model->load(Request::getPost())) {
-                    
-                    echo '<br>load(Request::getPost() if ( $model->load(Request::getPost()))';
-                    
-                    if ($model->validate()) {
-        
-                        echo 'ACTION REGISTRATION -if ($model->validate()) {';
-                        
-                        if($model->doRegister()){
-                        
-                            header ('Location: /' );
-                        }
-                        
-                    }
-                }
-            }
-            
-            $this->_view->render('registration',['model'=>$model]);
-            
-        }else {
-            throw new HttpException('Forbidden','403');
-        }
-        
-    }
+//    public function actionRegister() {
+//        
+//        if(Auth::isGuest()){
+//                        
+//            $model = new RegisterForm();
+//            
+//            if(Request::isPost()){
+//                
+//                $myPost=[];
+//                $myPost= $model->load(Request::getPost());
+//                                                            
+//                if ( $model->load(Request::getPost())) {
+//                    
+//                    echo '<br>load(Request::getPost() if ( $model->load(Request::getPost()))';
+//                    
+//                    if ($model->validate()) {
+//        
+//                        echo 'ACTION REGISTRATION -if ($model->validate()) {';
+//                        
+//                        if($model->doRegister()){
+//                        
+//                            header ('Location: /' );
+//                        }
+//                        
+//                    }
+//                }
+//            }
+//            
+//            $this->_view->render('registration',['model'=>$model]);
+//            
+//        }else {
+//            throw new HttpException('Forbidden','403');
+//        }
+//        
+//    }
     //put your code here
 }
