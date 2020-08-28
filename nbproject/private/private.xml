@@ -12,17 +12,25 @@
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/OpenServer/domains/oopblog.mvc/index.php</file>
             <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerLogin.class.php</file>
-            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerPost.class.php</file>
-            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerLogout.class.php</file>
-            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/models/PostForm.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerBloggers.class.php</file>
             <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerRegister.class.php</file>
             <file>file:/D:/OpenServer/domains/oopblog.mvc/core/base/BaseForm.class.php</file>
-            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/library/Validator.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerMain.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerBlogs.class.php</file>
             <file>file:/D:/OpenServer/domains/oopblog.mvc/core/views/templates/home.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/index.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/base/View.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/config/db_conf.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerPost.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerLogout.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/base/Controller.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/models/PostForm.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/library/Validator.class.php</file>
             <file>file:/D:/OpenServer/domains/oopblog.mvc/core/models/RegisterForm.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/controllers/ControllerBlog.class.php</file>
             <file>file:/D:/OpenServer/domains/oopblog.mvc/core/models/LoginForm.class.php</file>
+            <file>file:/D:/OpenServer/domains/oopblog.mvc/core/config/base_conf.php</file>
         </group>
     </open-files>
 </project-private>
