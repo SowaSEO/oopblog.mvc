@@ -72,5 +72,5 @@ if(!empty($errors)){
 <hr>
    
 <hr>
-    <p> У Вас вже є обліковий зарис?   <a class="nav-link" href="/login">Ввійти</a></p>  
+    <p> У Вас вже є обліковий запис?   <a class="nav-link" href="/login">Ввійти</a></p>  
          

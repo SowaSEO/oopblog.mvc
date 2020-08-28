@@ -36,7 +36,9 @@ class post extends BaseForm{
             
             $this->_db= Db::getDb();
 
-            $addWhere='and'.\library\Auth::getAddWhereUser('all');
+//            $addWhere='and'.\library\Auth::getAddWhereUser('all');
+            $addWhere='and'.$this->getAddWhereByStatus('all');
+            
 
             $sql ="SELECT `post`.`id` as `id`,`author_id`,`headline`,`description`,`title`,`content`,`datapub`,`status`, `user`.`nickname`, `user`.`pib`  FROM post LEFT JOIN user ON post.author_id = user.id  WHERE `post`.`id`=$id  $addWhere";
             

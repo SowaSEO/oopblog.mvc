@@ -89,7 +89,14 @@ abstract class BaseForm  {
         
     public function getAddWhereByStatus($status='published') {
 
-        if ( $status=='published') {  $addWhere=" `status` >= ".POST_STATUS_PUBLISHED; }
+         if ( !isset($_SESSION['user']['role']) or $status=='published' )  {
+                        
+            $addWhere=" `status` >= ".POST_STATUS_PUBLISHED; 
+            
+        }                        
+        
+        
+//        elseif ( $status=='published') {  $addWhere=" `status` >= ".POST_STATUS_PUBLISHED; }
 
         elseif ($status=='moderation' and $_SESSION['user']['role']=='user')
             {
